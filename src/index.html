@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
@@ -13,9 +19,9 @@
       <section id="hero">
         <div class="max-w-[1600px] mx-auto px-10 border border-yellow-300">
           <div
-            class="flex flex-col items-center justify-between mt-56 space-y-12 text-white"
+            class="flex flex-col items-center pt-56 pb-64 space-y-12 text-white border border-yellow-300"
           >
-            <div class="space-y-4">
+            <div class="flex flex-col items-center space-y-4">
               <img
                 src="/img/2024_web_hero_name-15-16.png"
                 alt="2024 創新數位設計國際研討會"
@@ -34,7 +40,241 @@
           </div>
         </div>
       </section>
+      <!--space 160px-->
+      <div class="mt-40"></div>
+      <!--introduce-->
+      <section id="introduce">
+        <div class="max-w-7xl mx-auto px-10 mb-40">
+          <div
+            class="flex flex-col items-center space-y-12 md:flex-row md:space-y-0 md:gap-12"
+          >
+            <!--img-->
+            <div class="w-full h-1/2 md:w-1/2 md:h-full">
+              <img
+                src="/img/2024_web_home_introduce-02.png"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!--text-->
+            <div
+              class="w-full h-1/2 space-y-4 font-sans text-left md:w-1/2 md:h-full"
+            >
+              <h2 class="text-main text-3xl font-bold md:text-4xl">
+                AI與數位媒體人才培育的未來
+              </h2>
+              <p class="text-content text-base">
+                在2020年底，ChatGPT改變了全世界對AI科技的想像，也改變了教育者對未來人才培育的想法。在過去，設計師要繪製一張圖片，需要經歷多道設計程序，才能夠完成一張符合業主需求的圖片。但現在，一般民眾也可以通過生成式AI做到一樣的事情，而且過程甚至更加輕鬆，只需要輸入幾個關鍵字，AI便會在幾秒鐘內生成出你想要的圖片。
+              </p>
+              <p class="text-content text-base">
+                在看見這些功能強大的AI科技後，不禁讓本會開始思考，數位設計領域該如何跟AI接軌，才能讓這些尚未成長的設計新秀，不被這股AI浪潮淹沒。因此，本會決定以AI世代、數位設計、人才培育為主題，邀請國內外學者共同探討AI世代下，數位設計領域的人才培育方針。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--theme-->
+      <section id="theme">
+        <div class="max-w-7xl mx-auto px-10 mb-40">
+          <!--top-->
+          <div class="flex flex-row items-baseline justify-between mb-12">
+            <h2 class="text-main text-3xl font-bold md:text-4xl">徵稿主題</h2>
+            <button class="hidden md:flex md:gap-2">
+              <a href="#" class="text-content">論文投稿</a>
+              <img src="/img/right-arrow.png" alt="" />
+            </button>
+          </div>
+          <!--item 1 container-->
+          <div
+            class="flex flex-col space-y-6 mb-6 md:flex-row md:items-stretch md:space-x-6 md:space-y-0"
+          >
+            <!--item 1-->
+            <div
+              class="flex flex-col w-full md:w-1/3 border border-main border-x-2 border-t-8 border-b-2 space-y-6 p-6"
+            >
+              <img
+                src="/img/icon/icidd2024_home_icon_A-v01.jpg"
+                alt=""
+                class="h-[72px] w-[72px]"
+              />
+              <h3 class="text-content text-2xl md:text-3xl">
+                數位設計理論與發展
+              </h3>
+              <ul class="list-inside list-disc text-content text-base">
+                <li>人工智慧相關的設計理論與教育</li>
+                <li>設計運算與認知</li>
+                <li>數位工具輔助設計與製造</li>
+                <li>數位設計工具應用與技術研發</li>
+              </ul>
+            </div>
+            <!--item 2-->
+            <div
+              class="flex flex-col w-full md:w-1/3 border border-main border-x-2 border-t-8 border-b-2 space-y-6 p-6"
+            >
+              <img
+                src="/img/icon/icidd2024_home_icon_B-v01.jpg"
+                alt=""
+                class="h-[72px] w-[72px]"
+              />
+              <h3 class="text-content text-2xl md:text-3xl">
+                創新科技發展與應用
+              </h3>
+              <ul class="list-inside list-disc text-content text-base">
+                <li>人工智慧與互動設計</li>
+                <li>人機互動議題</li>
+                <li>數位傳播科技的創新與實踐</li>
+                <li>數位科技新工具對設計/遊戲/媒體產業之影響</li>
+              </ul>
+            </div>
+            <!--item 3-->
+            <div
+              class="flex flex-col w-full md:w-1/3 border border-main border-x-2 border-t-8 border-b-2 space-y-6 p-6"
+            >
+              <img
+                src="/img/icon/icidd2024_home_icon_C-v01.jpg"
+                alt=""
+                class="h-[72px] w-[72px]"
+              />
+              <h3 class="text-content text-2xl md:text-3xl">
+                藝術與文化之數位創作
+              </h3>
+              <ul class="list-inside list-disc text-content text-base">
+                <li>數位設計與文化之跨域研究</li>
+                <li>數位設計及出版之創新議題</li>
+                <li>數位音樂與流行文化創意</li>
+                <li>數位視覺藝術與圖像創作</li>
+                <li>人工智慧對以上議題之影響</li>
+              </ul>
+            </div>
+          </div>
+          <!--item 2 container-->
+          <div
+            class="flex flex-col space-y-6 md:flex-row md:items-stretch md:space-x-6 md:space-y-0"
+          >
+            <!--item 4-->
+            <div
+              class="flex flex-col w-full md:w-1/3 border border-main border-x-2 border-t-8 border-b-2 space-y-6 p-6"
+            >
+              <img
+                src="/img/icon/icidd2024_home_icon_D-v01.jpg"
+                alt=""
+                class="h-[72px] w-[72px]"
+              />
+              <h3 class="text-content text-2xl md:text-3xl">
+                創新商品設計與實務
+              </h3>
+              <ul class="list-inside list-disc text-content text-base">
+                <li>物聯網開發與智慧生活</li>
+                <li>文化或創新商品設計</li>
+                <li>設計實務與產學合作</li>
+                <li>永續綠色設計開發</li>
+                <li>人工智慧對以上議題之影響</li>
+              </ul>
+            </div>
+            <!--item 5-->
+            <div
+              class="flex flex-col w-full md:w-1/3 border border-main border-x-2 border-t-8 border-b-2 space-y-6 p-6"
+            >
+              <img
+                src="/img/icon/icidd2024_home_icon_E-v01.jpg"
+                alt=""
+                class="h-[72px] w-[72px]"
+              />
+              <h3 class="text-content text-2xl md:text-3xl">
+                科技藝術與影像美學
+              </h3>
+              <ul class="list-inside list-disc text-content text-base">
+                <li>科技藝術暨媒體應用</li>
+                <li>影像傳播</li>
+                <li>動畫敘事</li>
+                <li>電影藝術</li>
+                <li>人工智慧對以上議題之影響</li>
+              </ul>
+            </div>
+            <!--item 6-->
+            <div
+              class="flex flex-col w-full h-80 md:w-1/3 border border-main border-x-2 border-t-8 border-b-2 space-y-6 p-6 md:h-auto"
+            >
+              <img
+                src="/img/icon/icidd2024_home_icon_F-v01.jpg"
+                alt=""
+                class="h-[72px] w-[72px]"
+              />
+              <h3 class="text-content text-2xl md:text-3xl">
+                媒體與設計相關議題
+              </h3>
+              <ul class="list-inside list-disc text-content text-base">
+                <li>人工智慧對媒體設計與傳播之影響</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--count down-->
+      <section id="countdown">
+        <div class="max-w-7xl mx-auto px-10 mb-40 border border-yellow-300">
+          <!--container-->
+          <div class="flex items-center justify-between 0">
+            <!--days-->
+            <div
+              class="bg-gray-800 text-white rounded-lg p-4 flex flex-col items-center"
+            >
+              <span id="days"></span>
+            </div>
+            <!--hours-->
+            <div class="text-white">
+              <span id="hours"></span>
+            </div>
+            <!--minutes-->
+            <div class="text-white">
+              <span id="minutes"></span>
+            </div>
+            <!--seconds-->
+            <div class="text-white">
+              <span id="seconds"></span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <!--js-->
+    <script>
+      const targetDate = new Date("2025-05-31T23:59:59"); // 目標時間
+
+      function updateCountdown() {
+        const now = new Date();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+          // 倒數結束時
+          document.getElementById("days").textContent = 0;
+          document.getElementById("hours").textContent = 0;
+          document.getElementById("minutes").textContent = 0;
+          document.getElementById("seconds").textContent = 0;
+          clearInterval(interval);
+          return;
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // 更新每個元素的文本內容
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+      }
+
+      // 每秒更新倒數
+      const interval = setInterval(updateCountdown, 1000);
+      updateCountdown(); // 初始化倒數
+    </script>
   </body>
 </html>

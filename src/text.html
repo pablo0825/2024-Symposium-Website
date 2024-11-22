@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>倒數計時</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      .grid {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 20px;
+        text-align: center;
+      }
+      .rounded-box {
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .bg-neutral {
+        background-color: #333;
+        color: #fff;
+      }
+      .countdown {
+        font-family: "Courier New", monospace;
+        font-size: 2rem;
+      }
+      .countdown span {
+        font-size: 3rem;
+        display: inline-block;
+      }
+      .countdown span::before {
+        content: attr(style);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span class="days" style="--value: 0"></span>
+        </span>
+        days
+      </div>
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span class="hours" style="--value: 0"></span>
+        </span>
+        hours
+      </div>
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span class="minutes" style="--value: 0"></span>
+        </span>
+        min
+      </div>
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span class="seconds" style="--value: 0"></span>
+        </span>
+        sec
+      </div>
+    </div>
+
+    <script>
+      const targetDate = new Date("2024-12-31T23:59:59"); // 目標時間
+
+      function updateCountdown() {
+        const now = new Date();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+          // 倒數結束時
+          document
+            .querySelectorAll(".countdown span")
+            .forEach((el) => el.style.setProperty("--value", "0"));
+          clearInterval(interval);
+          return;
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // 更新每個元素的 CSS 變數
+        document
+          .querySelector(".days")
+          .setAttribute("style", `--value:${days}`);
+        document
+          .querySelector(".hours")
+          .setAttribute("style", `--value:${hours}`);
+        document
+          .querySelector(".minutes")
+          .setAttribute("style", `--value:${minutes}`);
+        document
+          .querySelector(".seconds")
+          .setAttribute("style", `--value:${seconds}`);
+      }
+
+      // 每秒更新倒數
+      const interval = setInterval(updateCountdown, 1000);
+      updateCountdown(); // 初始化倒數
+    </script>
+  </body>
+</html>

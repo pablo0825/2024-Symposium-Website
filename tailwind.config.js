@@ -15,14 +15,11 @@ module.exports = {
         darkGrayishBlue: "hsl(210, 10%, 33%)",
         grayishBlue: "hsl(201, 11%, 66%)",
         main: "#4FB200",
+        content: "#CAD2C5",
       },
       fontFamily: {
-        sans: ["Bai Jamjuree", "sans-serif"],
+        sans: ["Noto Sans TC", "sans-serif"],
       },
-    },
-    fontFamily: {
-      sans: ["Mulish", "sans-serif"],
-      mono: ["Rokkitt", "monospace"],
     },
   },
   plugins: [],
