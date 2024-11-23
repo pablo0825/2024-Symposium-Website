@@ -4,6 +4,19 @@
 
 body {
   background-color: black;
+  color: "#CAD2C5";
+}
+
+h2 {
+  @apply text-main text-3xl font-bold md:text-4xl;
+}
+
+h3 {
+  @apply text-content text-2xl font-bold md:text-3xl;
+}
+
+p {
+  @apply text-content text-base;
 }
 
 #hero {
@@ -24,9 +37,58 @@ body {
 #countdown {
   width: 100%;
   height: 320px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
     url("/img/icidd2024_home_timing_background-v02.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.group:hover .w-5 {
+  transform: rotate(180deg);
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }

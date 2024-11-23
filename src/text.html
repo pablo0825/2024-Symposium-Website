@@ -3,126 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>倒數計時</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f4f4f4;
-      }
-      .grid {
-        display: grid;
-        grid-auto-flow: column;
-        gap: 20px;
-        text-align: center;
-      }
-      .rounded-box {
-        border-radius: 10px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .bg-neutral {
-        background-color: #333;
-        color: #fff;
-      }
-      .countdown {
-        font-family: "Courier New", monospace;
-        font-size: 2rem;
-      }
-      .countdown span {
-        font-size: 3rem;
-        display: inline-block;
-      }
-      .countdown span::before {
-        content: attr(style);
-      }
-    </style>
+    <title>兩欄布局選單</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+  <body class="bg-gray-100 text-gray-800">
+    <!-- 網頁選單 -->
+    <header class="bg-white shadow-md">
       <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
       >
-        <span class="countdown font-mono text-5xl">
-          <span class="days" style="--value: 0"></span>
-        </span>
-        days
+        <!-- 左側 LOGO -->
+        <div class="flex items-center space-x-4">
+          <img
+            src="your-logo.png"
+            alt="LOGO"
+            class="h-12 w-12 object-contain"
+          />
+          <span class="text-xl font-bold text-gray-700">ICIDD 2024</span>
+        </div>
+
+        <!-- 右側選單 -->
+        <nav class="space-x-6 hidden md:flex">
+          <!-- 關於 -->
+          <div class="group relative">
+            <a href="#" class="hover:text-blue-500 font-medium">關於</a>
+            <!-- 下拉選單 -->
+            <div
+              class="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md w-48"
+            >
+              <ul class="p-2 space-y-2">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >關於 ICIDD 2024</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >組織委員會</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 演講貴賓 -->
+          <div class="group relative">
+            <a href="#" class="hover:text-blue-500 font-medium">演講貴賓</a>
+            <!-- 下拉選單 -->
+            <div
+              class="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md w-48"
+            >
+              <ul class="p-2 space-y-2">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Masahiko Murakami</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Dr. Ramiro Corbetta</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 會議資訊 -->
+          <div class="group relative">
+            <a href="#" class="hover:text-blue-500 font-medium">會議資訊</a>
+            <!-- 下拉選單 -->
+            <div
+              class="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md w-48"
+            >
+              <ul class="p-2 space-y-2">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Submission</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
-        <span class="countdown font-mono text-5xl">
-          <span class="hours" style="--value: 0"></span>
-        </span>
-        hours
-      </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
-        <span class="countdown font-mono text-5xl">
-          <span class="minutes" style="--value: 0"></span>
-        </span>
-        min
-      </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
-        <span class="countdown font-mono text-5xl">
-          <span class="seconds" style="--value: 0"></span>
-        </span>
-        sec
-      </div>
-    </div>
+    </header>
 
-    <script>
-      const targetDate = new Date("2024-12-31T23:59:59"); // 目標時間
-
-      function updateCountdown() {
-        const now = new Date();
-        const timeRemaining = targetDate - now;
-
-        if (timeRemaining <= 0) {
-          // 倒數結束時
-          document
-            .querySelectorAll(".countdown span")
-            .forEach((el) => el.style.setProperty("--value", "0"));
-          clearInterval(interval);
-          return;
-        }
-
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-        // 更新每個元素的 CSS 變數
-        document
-          .querySelector(".days")
-          .setAttribute("style", `--value:${days}`);
-        document
-          .querySelector(".hours")
-          .setAttribute("style", `--value:${hours}`);
-        document
-          .querySelector(".minutes")
-          .setAttribute("style", `--value:${minutes}`);
-        document
-          .querySelector(".seconds")
-          .setAttribute("style", `--value:${seconds}`);
-      }
-
-      // 每秒更新倒數
-      const interval = setInterval(updateCountdown, 1000);
-      updateCountdown(); // 初始化倒數
-    </script>
+    <main class="max-w-7xl mx-auto mt-6 px-6">
+      <h1 class="text-3xl font-bold">歡迎來到 ICIDD 2024</h1>
+      <p class="mt-4 text-gray-600">這裡是主頁內容。</p>
+    </main>
   </body>
 </html>

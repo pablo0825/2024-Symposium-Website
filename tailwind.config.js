@@ -16,6 +16,7 @@ module.exports = {
         grayishBlue: "hsl(201, 11%, 66%)",
         main: "#4FB200",
         content: "#CAD2C5",
+        stress: "#16F617",
       },
       fontFamily: {
         sans: ["Noto Sans TC", "sans-serif"],
