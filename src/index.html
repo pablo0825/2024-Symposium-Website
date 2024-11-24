@@ -9,34 +9,257 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>2025 ICIDD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ICIDD 創新數位設計國際研討會</title>
+    <link rel="icon" href="/img/webLogo/icidd2024_web_icon-v02.png" type="image/x-icon">
+    <meta name="description" content="歡迎參加 ICIDD 2024，探索設計、科技與創新的未來。">
+    <meta name="keywords" content="ICIDD, 2024, 數位設計, 科技, 藝術">
+     <!-- Open Graph 協議 -->
+    <meta property="og:title" content="ICIDD 2024 - 創新數位設計國際研討會">
+    <meta property="og:description" content="歡迎參加 ICIDD 2024，探索設計、科技與創新的未來。">
+    <meta property="og:image" content="/img/webLogo/icidd2024_web_SEO-v01.png">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:type" content="website">
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- header dynamic loading -->
-    <div id="header-placeholder"></div>
+    <header id="main-menu">
+      <div class=" max-w-7xl mx-auto px-10">
+        <!--container-->
+        <div class="flex items-center justify-between py-4">
+          <!--web logo-->
+          <div>
+            <a href="#">
+              <img
+                src="/img/webLogo/icidd2024_web_logo-v02.png"
+                alt="ICIDD 2024研討會"
+                border="0"
+                class="h-8"
+              />
+            </a>
+          </div>
+          <!--menu-->
+          <nav class="space-x-4 hidden md:flex">
+            <!--about-->
+            <div class="group relative p-2">
+              <!--itme-->
+              <div class="flex space-x-2">
+                <a href="" class="text-content font-sans group-hover:text-stress"
+                  >關於</a
+                >
+                <div class="group">
+                  <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+                </div>
+              </div>
+              <!--drop down menu-->
+              <div
+                class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48"
+              >
+                <ul class="p-4  space-y-2">
+                  <li>
+                    <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                      >關於 ICIDD 2024</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                      >組織委員會</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--speaker-->
+            <div class="group relative p-2">
+              <!--itme-->
+              <div class="flex space-x-2 ">
+                <a href="" class="text-content font-sans group-hover:text-stress"
+                  >專題講者</a
+                >
+                <div class="group">
+                  <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+                </div>
+              </div>
+              <!--drop down menu-->
+              <div
+                class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48"
+              >
+                <ul class="p-4 space-y-2">
+                  <li>
+                    <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                      >Masahiko Murakami</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                      >Ramiro Corbetta</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Call For Paper-->
+            <div class="group relative p-2">
+              <div class="flex space-x-2">
+                <a href="" class="text-content font-sans group-hover:text-stress"
+                  >論文徵稿</a
+                >
+     <!--            <div class="group">
+                  <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+                </div> -->
+              </div>
+              <!--drop down menu-->
+     <!--          <div
+                class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48 "
+              >
+                <ul class="p-4 space-y-2">
+                  <li>
+                    <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                      >投稿主題</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                      >重要時程
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                      >論文投稿
+                    </a>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+          </nav>
+          <!--moblie-->
+          <button
+          id="mobile-menu-button"
+          class="md:hidden text-content hover:text-stress focus:outline-none focus:ring-2 focus:ring-gray-400"
+          >
+          <i id="menu-icon" class="fa-solid fa-bars fa-xl"></i>
+          <i id="close-icon" class="fa-solid fa-xmark fa-xl hidden"></i>
+        </button>
+        </div>
+      </div>
+        <!-- Mobile Menu -->
+  <nav
+  id="mobile-menu"
+  class="hidden md:hidden bg-white absolute top-16 left-0  w-full h-screen"
+>
+  <ul class="flex flex-col space-y-6 py-6 px-10">
+    <!-- 關於 -->
+    <li class="group">
+      <button
+        class="flex justify-between items-center w-full text-gray-600 hover:text-blue-600"
+        data-toggle="about-menu"
+      >
+        關於
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-4 h-4 transform group-hover:rotate-180 transition-transform"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      <ul id="about-menu" class="hidden space-y-4 pl-4 pt-4">
+        <li>
+          <a
+            href="#"
+            class="block text-gray-600 hover:text-blue-600"
+            >關於 ICIDD 2024</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block text-gray-600 hover:text-blue-600"
+            >組織委員會</a
+          >
+        </li>
+      </ul>
+    </li>
+    <!-- 專題講者 -->
+    <li class="group">
+      <button
+        class="flex justify-between items-center w-full text-gray-600 hover:text-blue-600"
+        data-toggle="speaker-menu"
+      >
+        專題講者
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-4 h-4 transform group-hover:rotate-180 transition-transform"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      <ul id="speaker-menu" class="hidden space-y-1 pl-4">
+        <li>
+          <a
+            href="#"
+            class="block text-gray-600 hover:text-blue-600"
+            >Masahiko Murakami</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block text-gray-600 hover:text-blue-600"
+            >Ramiro Corbetta</a
+          >
+        </li>
+      </ul>
+    </li>
+
+    <!-- 論文徵稿 -->
+    <li>
+      <a
+        href="#"
+        class="block text-gray-600 hover:text-blue-600"
+        >論文徵稿</a
+      >
+    </li>
+  </ul>
+</nav>
+    </header>
     <main>
       <!--hero-->
       <section id="hero">
-        <div class="max-w-[1600px] mx-auto px-10 border border-yellow-300">
+        <div class="max-w-[1400px] mx-auto px-10 ">
           <div
-            class="flex flex-col items-center pt-56 pb-64 space-y-12 text-white border border-yellow-300"
+            class="flex flex-col items-center pt-48 md:pt-32 space-y-12"
           >
-            <div class="flex flex-col items-center space-y-4">
+            <div class="flex flex-col items-center space-y-4 pb-20">
               <img
                 src="/img/2024_web_hero_name-15-16.png"
                 alt="2024 創新數位設計國際研討會"
-                class=""
+                class="md:pb-28"
               />
               <img
                 src="/img/2024_web_hero_name and date-15.png"
-                alt=""
+                alt="2024 創新數位設計國際研討會"
                 class=""
               />
             </div>
-            <button class="flex gap-2 bg-main px-6 py-4">
-              <a href="#">論文投稿</a>
-              <img src="/img/right-arrow.png" alt="" />
+            <button class="flex gap-2 bg-main px-6 py-4 hover:bg-stress">
+              <a href="#" class="text-white font-sans">論文投稿</a>
+              <i class="fa-solid fa-arrow-right text-white mt-1"></i>            
             </button>
           </div>
         </div>
@@ -80,9 +303,9 @@
             class="flex flex-row items-baseline justify-between mb-12 font-sans"
           >
             <h2>徵稿主題</h2>
-            <button class="hidden md:flex md:gap-2">
-              <a href="#" class="text-content">論文投稿</a>
-              <img src="/img/right-arrow.png" alt="" />
+            <button class="hidden group md:flex md:gap-2">
+              <a href="#" class="text-content group-hover:text-stress">論文投稿</a>
+              <i class="fa-solid fa-arrow-right text-content mt-1 group-hover:text-stress"></i>            
             </button>
           </div>
           <!--item 1 container-->
@@ -269,12 +492,12 @@
                   class="hidden absolute duration-200 top-64 bottom-0 right-0 left-0 bg-mi w-auto h-28 bg-main group-hover:block"
                 ></div>
                 <h3
-                  class="absolute duration-200 left-6 bottom-5 text-main group-hover:-translate-y-8 group-hover:text-content"
+                  class="absolute duration-200 left-6 bottom-5 text-main group-hover:-translate-y-8 group-hover:text-white"
                 >
                   Masahiko Murakami
                 </h3>
                 <p
-                  class="hidden absolute duration-200 left-6 bottom-4 group-hover:block text-center"
+                  class="hidden absolute duration-200 left-6 bottom-4 group-hover:block text-center text-white"
                 >
                   Skeleton Crew Studio, CEO
                 </p>
@@ -293,12 +516,12 @@
                   class="hidden absolute duration-200 top-64 bottom-0 right-0 left-0 bg-mi w-auto h-28 bg-main group-hover:block"
                 ></div>
                 <h3
-                  class="absolute duration-200 left-6 bottom-5 text-main group-hover:-translate-y-8 group-hover:text-content"
+                  class="absolute duration-200 left-6 bottom-5 text-main group-hover:-translate-y-8 group-hover:text-white"
                 >
                   Ramiro Corbetta
                 </h3>
                 <p
-                  class="hidden absolute duration-200 left-6 bottom-4 group-hover:block text-center"
+                  class="hidden absolute duration-200 left-6 bottom-4 group-hover:block text-center text-white"
                 >
                   New York University, Assistant Arts Professor
                 </p>
@@ -336,7 +559,9 @@
             <!--itme 1-->
             <div class="space-y-2">
               <h4 class="font-sans font-bold">指導單位</h4>
-              <img src="/img/logo/教育部.png" alt="教育部" />
+              <a href=""  target="_blank" rel="noopener noreferrer">
+                <img src="/img/logo/教育部.png" alt="教育部" />
+              </a>
             </div>
             <!--itme 2-->
             <div class="space-y-2">
@@ -344,26 +569,32 @@
               <div
                 class="flex flex-col space-y-4 lg:space-x-4 lg:flex-row lg:space-y-0"
               >
+              <a href="https://www.stust.edu.tw/" target="_blank" rel="noopener noreferrer">
                 <img
-                  src="/img/logo/南臺科技大學.png"
-                  alt="南臺科技大學"
-                  class="w-60"
-                />
+                src="/img/logo/南臺科技大學.png"
+                alt="南臺科技大學"
+                class="w-60"
+              />
+              </a>
+              <a href="https://cdd.stust.edu.tw/"  target="_blank" rel="noopener noreferrer">
                 <img
-                  src="/img/logo/南臺科技大學_數位設計學院.png"
-                  alt="南臺科技大學_數位設計學院"
-                  class="w-60"
-                />
+                src="/img/logo/南臺科技大學_數位設計學院.png"
+                alt="南臺科技大學_數位設計學院"
+                class="w-60"
+              />
+              </a>
               </div>
             </div>
             <!--itme 3-->
             <div class="space-y-2">
               <h4 class="font-sans font-bold">指導單位</h4>
-              <img
+              <a href="https://mes.stust.edu.tw/"  target="_blank" rel="noopener noreferrer">
+                <img
                 src="/img/logo/南台科技大學_多樂系-v02.png"
                 alt="教育部"
                 class="w-72"
               />
+              </a>
             </div>
           </div>
         </div>
@@ -426,8 +657,47 @@
       }
 
       // 動態載入 header 和 footer
-      loadHTML("header.html", "header-placeholder");
       loadHTML("footer.html", "footer-placeholder");
+
+      // 控制行動選單開關
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+const closeIcon = document.getElementById('close-icon');
+const body = document.body;
+
+
+// 切換行動選單顯示
+mobileMenuButton.addEventListener('click', () => {
+  const isMenuHidden = mobileMenu.classList.contains('hidden');
+
+  // 切換行動選單顯示/隱藏
+  mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.toggle('block');
+
+  // 切換頁面滾動控制
+  body.style.overflow = isMenuHidden ? 'hidden' : '';
+
+  // 切換圖示顯示
+  menuIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
+});
+
+// 控制子選單的展開與折疊
+const toggleButtons = document.querySelectorAll('[data-toggle]');
+toggleButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const menuId = button.getAttribute('data-toggle');
+    const subMenu = document.getElementById(menuId);
+
+    // 切換子選單顯示
+    subMenu.classList.toggle('hidden');
+    subMenu.classList.toggle('block');
+  });
+});
+
+
+      
     </script>
   </body>
 </html>

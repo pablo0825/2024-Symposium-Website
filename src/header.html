@@ -1,7 +1,7 @@
-<header>
-  <div class="max-w-7xl mx-auto px-10">
+<header id="main-menu">
+  <div class=" max-w-7xl mx-auto px-10">
     <!--container-->
-    <div class="flex items-center justify-between py-6">
+    <div class="flex items-center justify-between py-4">
       <!--web logo-->
       <div>
         <a href="#">
@@ -14,37 +14,23 @@
         </a>
       </div>
       <!--menu-->
-      <nav class="space-x-6 hidden md:flex">
+      <nav class="space-x-4 hidden md:flex">
         <!--about-->
         <div class="group relative p-2">
           <!--itme-->
-          <div class="flex">
+          <div class="flex space-x-2">
             <a href="" class="text-content font-sans group-hover:text-stress"
               >關於</a
             >
             <div class="group">
-              <svg
-                class="w-5 h-5 ml-2 -mr-1 mt-[2px] text-content group-hover:text-stress transition-transform duration-300"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
             </div>
           </div>
           <!--drop down menu-->
           <div
-            class="hidden absolute right-0 mt-2 group-hover:block bg-white border border-gray-200 w-48"
+            class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48"
           >
-            <ul class="p-4 space-y-2">
+            <ul class="p-4  space-y-2">
               <li>
                 <a href="" class="block px-4 py-2 hover:bg-gray-100"
                   >關於 ICIDD 2024</a
@@ -61,14 +47,17 @@
         <!--speaker-->
         <div class="group relative p-2">
           <!--itme-->
-          <div class="flex">
+          <div class="flex space-x-2 ">
             <a href="" class="text-content font-sans group-hover:text-stress"
               >專題講者</a
             >
+            <div class="group">
+              <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+            </div>
           </div>
           <!--drop down menu-->
           <div
-            class="hidden absolute right-0 mt-2 group-hover:block bg-white border border-gray-200 w-48"
+            class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48"
           >
             <ul class="p-4 space-y-2">
               <li>
@@ -86,14 +75,17 @@
         </div>
         <!--Call For Paper-->
         <div class="group relative p-2">
-          <div class="flex">
+          <div class="flex space-x-2">
             <a href="" class="text-content font-sans group-hover:text-stress"
               >論文徵稿</a
             >
+ <!--            <div class="group">
+              <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+            </div> -->
           </div>
           <!--drop down menu-->
-          <div
-            class="hidden absolute right-0 mt-2 group-hover:block bg-white border border-gray-200 w-48"
+ <!--          <div
+            class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48 "
           >
             <ul class="p-4 space-y-2">
               <li>
@@ -112,10 +104,170 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </nav>
       <!--moblie-->
+      <button
+      id="mobile-menu-button"
+      class="md:hidden text-content hover:text-stress focus:outline-none focus:ring-2 focus:ring-gray-400"
+      >
+      <i class="fa-solid fa-bars fa-xl"></i>
+    </button>
+    </div>
+  </div>
+   <!-- Mobile Menu -->
+   <nav
+   id="mobile-menu"
+   class="hidden md:hidden bg-white shadow-lg absolute top-16 left-0 w-full"
+ >
+   <ul class="flex flex-col space-y-2 p-4">
+     <li>
+       <a href="#section1" class="block text-gray-600 hover:text-blue-600">About</a>
+     </li>
+     <li>
+       <a href="#section2" class="block text-gray-600 hover:text-blue-600">Services</a>
+     </li>
+     <li>
+       <a href="#section3" class="block text-gray-600 hover:text-blue-600">Contact</a>
+     </li>
+   </ul>
+ </nav>
+</header>
+
+<!--fixed menu-->
+<header id="sticky-menu" class="hidden fixed top-0 left-0 w-full bg-black z-50">
+  <div class=" max-w-7xl mx-auto px-10">
+    <!--container-->
+    <div class="flex items-center justify-between py-4">
+      <!--web logo-->
+      <div>
+        <a href="#">
+          <img
+            src="/img/webLogo/icidd2024_web_logo-v02.png"
+            alt="ICIDD 2024研討會"
+            border="0"
+            class="h-8"
+          />
+        </a>
+      </div>
+      <!--menu-->
+      <nav class="space-x-4 hidden md:flex">
+        <!--about-->
+        <div class="group relative p-2">
+          <!--itme-->
+          <div class="flex space-x-2">
+            <a href="" class="text-content font-sans group-hover:text-stress"
+              >關於</a
+            >
+            <div class="group">
+              <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+            </div>
+          </div>
+          <!--drop down menu-->
+          <div
+            class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48"
+          >
+            <ul class="p-4  space-y-2">
+              <li>
+                <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                  >關於 ICIDD 2024</a
+                >
+              </li>
+              <li>
+                <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                  >組織委員會</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--speaker-->
+        <div class="group relative p-2">
+          <!--itme-->
+          <div class="flex space-x-2 ">
+            <a href="" class="text-content font-sans group-hover:text-stress"
+              >專題講者</a
+            >
+            <div class="group">
+              <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+            </div>
+          </div>
+          <!--drop down menu-->
+          <div
+            class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48"
+          >
+            <ul class="p-4 space-y-2">
+              <li>
+                <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                  >Masahiko Murakami</a
+                >
+              </li>
+              <li>
+                <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                  >Ramiro Corbetta</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Call For Paper-->
+        <div class="group relative p-2">
+          <div class="flex space-x-2">
+            <a href="" class="text-content font-sans group-hover:text-stress"
+              >論文徵稿</a
+            >
+ <!--            <div class="group">
+              <i class="fa-solid fa-angle-down text-content group-hover:text-stress transition-transform duration-300"></i>
+            </div> -->
+          </div>
+          <!--drop down menu-->
+ <!--          <div
+            class="hidden absolute right-0 mt-3 group-hover:block bg-white border border-gray-200 w-48 "
+          >
+            <ul class="p-4 space-y-2">
+              <li>
+                <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                  >投稿主題</a
+                >
+              </li>
+              <li>
+                <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                  >重要時程
+                </a>
+              </li>
+              <li>
+                <a href="" class="block px-4 py-2 hover:bg-gray-100"
+                  >論文投稿
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </nav>
+      <!--moblie-->
+      
     </div>
   </div>
 </header>
+
+<!--js-->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+// 切換移動選單的顯示與隱藏
+mobileMenuButton.addEventListener('click', () => {
+  if (mobileMenu.classList.contains('hidden')) {
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.add('block');
+  } else {
+    mobileMenu.classList.remove('block');
+    mobileMenu.classList.add('hidden');
+  }
+});
+
+
+
+
+</script>
