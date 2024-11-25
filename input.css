@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: "#CAD2C5";
+}
+
+h2 {
+  @apply text-main text-3xl font-bold md:text-4xl;
+}
+
+h3 {
+  @apply text-content text-2xl font-bold md:text-3xl;
+}
+
+p {
+  @apply text-content text-base;
+}
+
+#hero {
+  width: 100%;
+  height: 900px;
+  background-image: url("/img/web_home_banner-v03.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#other-hero {
+  width: 100%;
+  height: 360px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+    url("/img/icidd2024_home_timing_background-v02.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    width: 100%;
+    height: 672px;
+    background-image: url("/img/web_home_banner-v03.png");
+  }
+}
+
+#countdown {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+    url("/img/icidd2024_home_timing_background-v02.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.group:hover .fa-angle-down {
+  transform: rotate(180deg);
+  transform-origin: center; /* 確保旋轉基點為正中心 */
+}
