@@ -7,6 +7,11 @@ body {
   color: "#CAD2C5";
 }
 
+#main-menu {
+  position: sticky;
+  top: 0;
+}
+
 h2 {
   @apply text-main text-3xl font-bold md:text-4xl;
 }

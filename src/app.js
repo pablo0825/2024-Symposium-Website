@@ -45,31 +45,3 @@ toggleButtons.forEach((button) => {
     arrowIcon.classList.toggle("rotate-180");
   });
 });
-
-// Handle fixed menu
-const mainMenu = document.getElementById("main-menu");
-const stickyMenu = document.getElementById("sticky-menu");
-
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    if (!entry.isIntersecting) {
-      stickyMenu.classList.remove("hidden");
-      stickyMenu.classList.add("block");
-    } else {
-      stickyMenu.classList.remove("block");
-      stickyMenu.classList.add("hidden");
-    }
-  },
-  { root: null, threshold: 0 }
-);
-
-observer.observe(mainMenu);
-
-//處理固定行動選單
-const mobileMenus = document.querySelector(".mobile-menu");
-const headerHeight = 64;
-
-window.addEventListener("scroll", () => {
-  const scrollPosition = window.scrollY;
-  mobileMenus.style.top = `${scrollPosition + headerHeight}px`;
-});

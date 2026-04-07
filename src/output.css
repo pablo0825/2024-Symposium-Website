@@ -558,16 +558,16 @@ video {
   visibility: collapse;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .bottom-0 {
@@ -1042,6 +1042,11 @@ video {
 body {
   background-color: black;
   color: "#CAD2C5";
+}
+
+#main-menu {
+  position: sticky;
+  top: 0;
 }
 
 h2 {
